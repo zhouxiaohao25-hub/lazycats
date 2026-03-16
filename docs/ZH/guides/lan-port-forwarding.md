@@ -5,11 +5,19 @@
 
 # 局域网端口转发访问流程：
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118115456587.png?imageSlim" alt="image-20251118115456587" style="zoom:33%;" /> 
+ ![image-20260316154107450](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154107450.png)
 
-> 设备访问——>入口地址——>通过端口转发后——>访问目标地址
+![image-20260316154512856](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154512856.png)
+
+![image-20260316154552758](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154552758.png) 
+
+![image-20260316154726345](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154726345.png)
+
+> 
 >
-> 始终记住访问的永远是左边的地址
+> 设备访问——>添加转发规则——>基础信息——>出口配置——>目标配置
+>
+> 始终记住访问的永远是出口配置的地址
 >
 > 注意端口范围：1~65535（尽量用1024以上的端口，避免一些常用协议端口，避免转发一些使用过的端口，创建之前一定先检测连通性）
 
@@ -27,25 +35,35 @@
 
 ##### 通过微服网卡IP——>访问——>微服应用服务
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118121830837.png?imageSlim" alt="image-20251118121830837" style="zoom: 33%;" /> 
+![image-20260316161050577](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161050577.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118121940734.png?imageSlim" alt="image-20251118121940734" style="zoom:50%;" /> 
+![image-20260316161019979](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161019979.png)
+
+
+
+![image-20260316142618716](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316142618716.png) 
 
 ##### 通过微服网卡IP——>访问——>微服登录的客户端主机上的服务（目标地址的客户端要登录懒猫微服应用）
 
-这个可以用远程桌面，访问登录客户端的设备（示例演示的是一个python的例子）
+这个可以用远程桌面，访问登录客户端的设备
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118123002780.png?imageSlim" alt="image-20251118123002780" style="zoom:33%;" /> 
+![image-20260316161352070](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161352070.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118123220926.png?imageSlim" alt="image-20251118123220926" style="zoom: 50%;" /> 
+![image-20260316161453107](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161453107.png)
+
+  ![image-20260316161739081](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161739081.png)                         
 
 ##### 通过微服网卡IP——>访问——>其他网络地址：微服局域网设备或者微服127.0.0.1的服务（本身127.0.0.1的服务是指：mainframe中有network_mode：host的，或者dockge部署的容器）
 
-这个可以用远程桌面，微服局域网设备或者微服127.0.0.1的服务（示例演示dockge起的服务）
+这个可以用远程桌面，微服局域网设备或者微服127.0.0.1的服务（以我刚刚那台电脑e为例）
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118130601733.png?imageSlim" alt="image-20251118130601733" style="zoom:33%;" /> 
+![image-20260316162432025](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162432025.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118130714411.png?imageSlim" alt="image-20251118130714411" style="zoom:50%;" /> 
+![image-20260316162517669](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162517669.png)
+
+ ![image-20260316162621695](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162621695.png)  
+
+ 
 
 ### 2、微服虚拟网卡 (仅微服应用容器可访问)
 
@@ -61,7 +79,13 @@
 
 [以Radarr和Jackett为例](https://playground.lazycat.cloud/#/guideline/295)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250605165748100.png?imageSlim" alt="image-20250409132826584" style="zoom:33%;" /> 
+![image-20260316162845354](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162845354.png)
+
+![image-20260316163949205](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316163949205.png)   
+
+![image-20260316164056482](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316164056482.png)                                                                          
+
+ 
 
 <img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250605165748091.png?imageSlim" alt="image-20250409140008473" style="zoom: 50%;" /> 
 
@@ -75,19 +99,27 @@
 
 ##### 登录客户端——>访问：$微服名.heiyu.space:端口——>微服登录的客户端主机上的服务（目标地址的客户端要登录懒猫微服应用）
 
-这个可以用远程桌面，访问登录客户端的设备（示例演示的是一个python的例子）
+这个可以用远程桌面，访问登录客户端的设备
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118132638385.png?imageSlim" alt="image-20251118132638385" style="zoom:33%;" /> 
+![image-20260316165504054](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165504054.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118132738392.png?imageSlim" alt="image-20251118132738392" style="zoom:50%;" />  
+![image-20260316165555040](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165555040.png)
+
+
+
+![image-20260316165704030](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165704030.png)     
 
 ##### 登录客户端——>访问：$微服名.heiyu.space:端口——>其他网络地址：微服局域网设备或者微服127.0.0.1的服务（本身127.0.0.1的服务是指：mainframe中有network_mode：host的，或者dockge部署的容器）
 
 这个可以用远程桌面，微服局域网设备或者微服127.0.0.1的服务（示例演示微服局域网的Ubuntu的ssh远程）
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118132901093.png?imageSlim" alt="image-20251118132901093" style="zoom:33%;" />  
+![image-20260316170254985](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316170254985.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118133025952.png?imageSlim" alt="image-20251118133025952" style="zoom:50%;" />  
+![image-20260316172835396](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316172835396.png)
+
+  ![image-20260316175817056](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316175817056.png)
+
+
 
 ### 4、微服务户端 (仅映射的客户端本地可访问)
 
@@ -101,9 +133,13 @@
 
 ##### 登录客户端——>本地客户端访问127.0.0.1:端口——>微服应用服务、其他客户端的服务端口、其他地址服务端口
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118135539336.png?imageSlim" alt="image-20251118135539336" style="zoom: 33%;" /> 
+![image-20260316171701541](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171701541.png)
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118135613205.png?imageSlim" alt="image-20251118135613205" style="zoom: 50%;" /> 
+![image-20260316171817819](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171817819.png)
+
+![image-20260316171927295](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171927295.png)
+
+
 
 ### 5、微服通配地址 (0.0.0.0)
 
@@ -137,7 +173,15 @@
 
 如果不知道转发应用那个端口，可以点击端口旁边的小问号，查看具体服务对应的具体端口
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118140517380.png?imageSlim" alt="image-20251118140517380" style="zoom: 33%;" /> 
+![image-20260316173258996](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173258996.png)
+
+![image-20260316173354803](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173354803.png)
+
+![image-20260316173441130](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173441130.png)
+
+![image-20260316173757257](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173757257.png)
+
+
 
 ### 2、微服客户端
 
@@ -157,7 +201,7 @@
 
 这个可以用作远程访问，前提是对端设备也登陆了懒猫微服客户端
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118140604164.png?imageSlim" alt="image-20251118140604164" style="zoom:33%;" /> 
+![image-20260316173847176](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173847176.png)
 
 ### 3、其他网络地址
 
@@ -181,13 +225,51 @@
 
 dockge的写法
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118140845642.png?imageSlim" alt="image-20251118140845642" style="zoom: 33%;" /> 
+![image-20260316173949682](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173949682.png)
+
+![image-20260316174420535](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316174420535.png)
 
 微服同局域网的写法
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/image-20251118140942224.png?imageSlim" alt="image-20251118140942224" style="zoom:33%;" /> 
+![image-20260316173949682](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173949682.png)
+
+![image-20260316174209273](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316174209273.png)
 
 ## 结语
 
 端口转发玩法性很多，入口地址与目标地址可以有很多种搭配方式，规则保存之前一定要测试连通性
+
+
+
+## 6.添加转发LPK
+
+作用：创建一个简单的转发应用，并在提交后自动安装
+
+过程：
+
+![image-20260316180655446](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180655446.png)
+
+![image-20260316180542355](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180542355.png)
+
+
+
+
+
+# 7.添加NetMap LPK
+
+作用：**微服网络中的一个虚拟网络节点**，按目标地址生成并安装 NetMap 应用，不额外维护历史记录。
+
+过程：
+
+![image-20260316180800869](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180800869.png)
+
+![image-20260316182433743](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316182433743.png)
+
+
+
+
+
+
+
+
 

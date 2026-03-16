@@ -1,4 +1,4 @@
-# CloudFlare 配置指南和端口转发技巧
+# CloudFlare  配置指南和端口转发技巧
 
 [TOC]
 
@@ -6,11 +6,15 @@
 
 ![image-20250313172017688](https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250313172017827.png?imageSlim) 
 
+
+
+
+
 ## 具体实现
 
 ## 1、登录 CloudFlare
 
-- 在微服上打开应用商店——> 下载 CloudFlared 并打开——> 点击右上角切换语言“中文简体”——> 点击底部“ZeroTrust 仪表盘”
+- 在微服上打开应用商店——> 下载 CloudFlared UI 并打开——> 点击右上角切换语言“中文简体”——> 点击底部“ZeroTrust 仪表盘”
 
 <img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250313092316870.png?imageSlim" alt="image-20250313092316818" style="zoom: 33%;" />  
 
@@ -25,6 +29,12 @@
 - 这里 CloudFlare 会让您搞一个团队名称，这个根据业务需求自行选择，这里我是直接点击右上角“取消并退出”——> 回到仪表盘主页
 
 <img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250313092937381.png?imageSlim" alt="image-20250313092937325" style="zoom:50%;" /> 
+
+
+
+
+
+
 
 ## 2、域名托管
 
@@ -113,7 +123,15 @@ dig NS 域名
 
 下拉端口就可以获取了
 
-![a6aace8f82bbd2374a77235eb09ca5bb](https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/202506261623480.png)
+![image-20260316134900211](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316134900211.png)
+
+![image-20260316135156623](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316135156623.png)
+
+![image-20260316140047999](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316140047999.png)
+
+
+
+
 
 #### 2、配置转发
 
@@ -132,7 +150,11 @@ dig NS 域名
 添加完成之后点击“测速连接”确保能正常——>创建
 ```
 
-<img src="https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250313160853937.png?imageSlim" alt="image-20250313160853847" style="zoom: 33%;" /> 
+![image-20260316135156623](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316135156623.png)
+
+![image-20260316140047999](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316140047999.png)
+
+
 
 #### 3、测试 Cloudflare 应用与转发应用是否正常访问
 
@@ -147,7 +169,7 @@ curl -I host.lzcapp:5244
 #访问微服的5244端口，-I只显示请求头信息，返回状态码200，证明访问成功
 ```
 
-![image-20250313162928024](https://lzc-playground-1301583638.cos.ap-chengdu.myqcloud.com/guidelines/395/20250313162928090.png?imageSlim)
+![image-20260316141256841](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316141256841.png)
 
 ### 4、配置转发域名
 
