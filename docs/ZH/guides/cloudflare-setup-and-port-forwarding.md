@@ -123,11 +123,11 @@ dig NS 域名
 
 下拉端口就可以获取了
 
-![image-20260316134900211](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316134900211.png)
+![image-20260316134900211](images/image-20260316134900211.png)
 
-![image-20260316135156623](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316135156623.png)
+![image-20260316135156623](images/image-20260316135156623.png)
 
-![image-20260316140047999](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316140047999.png)
+![image-20260316140047999](images/image-20260316140047999.png)
 
 
 
@@ -150,9 +150,9 @@ dig NS 域名
 添加完成之后点击“测速连接”确保能正常——>创建
 ```
 
-![image-20260316135156623](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316135156623.png)
+![image-20260316135156623](images/image-20260316135156623.png)
 
-![image-20260316140047999](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316140047999.png)
+![image-20260316140047999](images/image-20260316140047999.png)
 
 
 
@@ -169,7 +169,7 @@ curl -I host.lzcapp:5244
 #访问微服的5244端口，-I只显示请求头信息，返回状态码200，证明访问成功
 ```
 
-![image-20260316141256841](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316141256841.png)
+![image-20260316141256841](images/image-20260316141256841.png)
 
 ### 4、配置转发域名
 

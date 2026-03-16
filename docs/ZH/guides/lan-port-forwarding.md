@@ -5,13 +5,13 @@
 
 # 局域网端口转发访问流程：
 
- ![image-20260316154107450](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154107450.png)
+ ![image-20260316154107450](images/image-20260316154107450.png)
 
-![image-20260316154512856](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154512856.png)
+![image-20260316154512856](images/image-20260316154512856.png)
 
-![image-20260316154552758](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154552758.png) 
+![image-20260316154552758](images/image-20260316154552758.png) 
 
-![image-20260316154726345](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316154726345.png)
+![image-20260316154726345](images/image-20260316154726345.png)
 
 > 
 >
@@ -35,33 +35,33 @@
 
 ##### 通过微服网卡IP——>访问——>微服应用服务
 
-![image-20260316161050577](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161050577.png)
+![image-20260316161050577](images/image-20260316161050577.png)
 
-![image-20260316161019979](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161019979.png)
+![image-20260316161019979](images/image-20260316161019979.png)
 
 
 
-![image-20260316142618716](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316142618716.png) 
+![image-20260316142618716](images/image-20260316142618716.png) 
 
 ##### 通过微服网卡IP——>访问——>微服登录的客户端主机上的服务（目标地址的客户端要登录懒猫微服应用）
 
 这个可以用远程桌面，访问登录客户端的设备
 
-![image-20260316161352070](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161352070.png)
+![image-20260316161352070](images/image-20260316161352070.png)
 
-![image-20260316161453107](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161453107.png)
+![image-20260316161453107](images/image-20260316161453107.png)
 
-  ![image-20260316161739081](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316161739081.png)                         
+  ![image-20260316161739081](images/image-20260316161739081.png)                         
 
 ##### 通过微服网卡IP——>访问——>其他网络地址：微服局域网设备或者微服127.0.0.1的服务（本身127.0.0.1的服务是指：mainframe中有network_mode：host的，或者dockge部署的容器）
 
 这个可以用远程桌面，微服局域网设备或者微服127.0.0.1的服务（以我刚刚那台电脑e为例）
 
-![image-20260316162432025](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162432025.png)
+![image-20260316162432025](images/image-20260316162432025.png)
 
-![image-20260316162517669](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162517669.png)
+![image-20260316162517669](images/image-20260316162517669.png)
 
- ![image-20260316162621695](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162621695.png)  
+ ![image-20260316162621695](images/image-20260316162621695.png)  
 
  
 
@@ -79,11 +79,11 @@
 
 [以Radarr和Jackett为例](https://playground.lazycat.cloud/#/guideline/295)
 
-![image-20260316162845354](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316162845354.png)
+![image-20260316162845354](images/image-20260316162845354.png)
 
-![image-20260316163949205](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316163949205.png)   
+![image-20260316163949205](images/image-20260316163949205.png)   
 
-![image-20260316164056482](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316164056482.png)                                                                          
+![image-20260316164056482](images/image-20260316164056482.png)                                                                          
 
  
 
@@ -101,23 +101,23 @@
 
 这个可以用远程桌面，访问登录客户端的设备
 
-![image-20260316165504054](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165504054.png)
+![image-20260316165504054](images/image-20260316165504054.png)
 
-![image-20260316165555040](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165555040.png)
+![image-20260316165555040](images/image-20260316165555040.png)
 
 
 
-![image-20260316165704030](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316165704030.png)     
+![image-20260316165704030](images/image-20260316165704030.png)     
 
 ##### 登录客户端——>访问：$微服名.heiyu.space:端口——>其他网络地址：微服局域网设备或者微服127.0.0.1的服务（本身127.0.0.1的服务是指：mainframe中有network_mode：host的，或者dockge部署的容器）
 
 这个可以用远程桌面，微服局域网设备或者微服127.0.0.1的服务（示例演示微服局域网的Ubuntu的ssh远程）
 
-![image-20260316170254985](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316170254985.png)
+![image-20260316170254985](images/image-20260316170254985.png)
 
-![image-20260316172835396](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316172835396.png)
+![image-20260316172835396](images/image-20260316172835396.png)
 
-  ![image-20260316175817056](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316175817056.png)
+  ![image-20260316175817056](images/image-20260316175817056.png)
 
 
 
@@ -133,11 +133,11 @@
 
 ##### 登录客户端——>本地客户端访问127.0.0.1:端口——>微服应用服务、其他客户端的服务端口、其他地址服务端口
 
-![image-20260316171701541](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171701541.png)
+![image-20260316171701541](images/image-20260316171701541.png)
 
-![image-20260316171817819](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171817819.png)
+![image-20260316171817819](images/image-20260316171817819.png)
 
-![image-20260316171927295](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316171927295.png)
+![image-20260316171927295](images/image-20260316171927295.png)
 
 
 
@@ -173,13 +173,13 @@
 
 如果不知道转发应用那个端口，可以点击端口旁边的小问号，查看具体服务对应的具体端口
 
-![image-20260316173258996](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173258996.png)
+![image-20260316173258996](images/image-20260316173258996.png)
 
-![image-20260316173354803](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173354803.png)
+![image-20260316173354803](images/image-20260316173354803.png)
 
-![image-20260316173441130](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173441130.png)
+![image-20260316173441130](images/image-20260316173441130.png)
 
-![image-20260316173757257](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173757257.png)
+![image-20260316173757257](images/image-20260316173757257.png)
 
 
 
@@ -201,7 +201,7 @@
 
 这个可以用作远程访问，前提是对端设备也登陆了懒猫微服客户端
 
-![image-20260316173847176](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173847176.png)
+![image-20260316173847176](images/image-20260316173847176.png)
 
 ### 3、其他网络地址
 
@@ -225,15 +225,15 @@
 
 dockge的写法
 
-![image-20260316173949682](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173949682.png)
+![image-20260316173949682](images/image-20260316173949682.png)
 
-![image-20260316174420535](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316174420535.png)
+![image-20260316174420535](images/image-20260316174420535.png)
 
 微服同局域网的写法
 
-![image-20260316173949682](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316173949682.png)
+![image-20260316173949682](images/image-20260316173949682.png)
 
-![image-20260316174209273](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316174209273.png)
+![image-20260316174209273](images/image-20260316174209273.png)
 
 ## 结语
 
@@ -247,9 +247,9 @@ dockge的写法
 
 过程：
 
-![image-20260316180655446](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180655446.png)
+![image-20260316180655446](images/image-20260316180655446.png)
 
-![image-20260316180542355](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180542355.png)
+![image-20260316180542355](images/image-20260316180542355.png)
 
 
 
@@ -261,10 +261,9 @@ dockge的写法
 
 过程：
 
-![image-20260316180800869](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316180800869.png)
+![image-20260316180800869](images/image-20260316180800869.png)
 
-![image-20260316182433743](/home/zhouhao/.var/app/io.typora.Typora/config/Typora/typora-user-images/image-20260316182433743.png)
-
+![image-20260316182433743](images/image-20260316182433743.png)
 
 
 
